@@ -1,0 +1,22 @@
+export const initialState = {
+    posts: [
+        { title: 'myTitle1', post: 'myPost11111111111111111111111111111111111111111111111111111111111' },
+        { title: 'myTitle2', post: 'myPost2' },
+        { title: 'myTitle3', post: 'myPost3' },
+        { title: 'myTitle4', post: 'myPost4' },
+        { title: 'myTitle5', post: 'myPost5' },
+        { title: 'myTitle6', post: 'myPost6' },
+        { title: 'myTitle7', post: 'myPost7' },
+        { title: 'myTitle8', post: 'myPost8' },
+        { title: 'myTitle9', post: 'myPost9' },
+        { title: 'myTitle10', post: 'myPost10' },
+        { title: 'myTitle12', post: 'myPost12' },
+        { title: 'myTitle13', post: 'myPost13' },
+        { title: 'myTitle14', post: 'myPost14' },
+        { title: 'myTitle15', post: 'myPost15' },
+        { title: 'myTitle16', post: 'myPost16' },
+        { title: 'myTitle17', post: 'myPost17' },
+        { title: 'myTitle18', post: 'myPost18' },
+        { title: 'myTitle19', post: 'myPost19' },
+    ],
+};
