@@ -12,7 +12,7 @@
 
 ## Технические требования
 
-- Create react app (можно собрать самому, но CRA  достатчоно). TypeScript т в плюс
+- Create react app (можно собрать самому, но CRA  достатчоно). TypeScript будет в плюс
 - React useReducer
 - React Hook Form для форм с валидацией
 - Для верстки воспользоваться любым готовым фреймворком (material ui, ant, etc)
