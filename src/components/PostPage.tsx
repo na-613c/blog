@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
+import Post from '../models/PostI'
 
-const PostPage = ({ post }: any) => {
+
+const PostPage: FC<{ post: Post }> = ({ post }) => {
   return (
     <div>
       <h1>{post.title}</h1>

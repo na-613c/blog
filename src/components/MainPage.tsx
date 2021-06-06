@@ -1,13 +1,9 @@
-import React from 'react';
-import { Table, Typography, Button, Row, Col } from 'antd';
+import React, { FC } from 'react';
+import { Table, Typography } from 'antd';
 import { NavLink } from 'react-router-dom'
 import { ColumnsType } from 'antd/es/table';
+import Post from '../models/PostI'
 
-
-interface Post {
-    title: string;
-    post: string;
-}
 
 const { Text } = Typography;
 
@@ -18,7 +14,7 @@ const columns: ColumnsType<Post> = [
         dataIndex: 'title',
         key: 'title',
         align: 'center',
-        render: (title: any, _: any, index: any) => <NavLink to={`/post${index + 1}`}>{title}</NavLink>
+        render: (title: string, post: Post) => <NavLink to={`/post${post.id + 1}`}>{title}</NavLink>
     },
     {
         title: 'Post',
@@ -31,16 +27,19 @@ const columns: ColumnsType<Post> = [
 ]
 
 
-const MainPage = ({ posts }: any) => {
+const MainPage: FC<{ posts: Post[] }> = ({ posts }) => {
     return (
-        <Row style={{ margin: 'auto', width: 400 }} justify="space-around">
-            <Col>
-                <Table columns={columns} dataSource={posts} style={{ width: 200 }} bordered />
-            </Col>
-            <Col>
-                <NavLink to={'/create-post-page'}><Button type="primary">Create Post</Button></NavLink>
-            </Col>
-        </Row>
+        <div style={{ margin: 'auto', width: 400 }}>
+            <Table
+                columns={columns}
+                dataSource={posts}
+                pagination={{
+                    defaultPageSize: 5,
+                    pageSizeOptions: ['5', '10', '20', '50', '100'],
+                    size: 'default',
+                }}
+                bordered />
+        </div>
     )
 };
 

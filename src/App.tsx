@@ -5,6 +5,7 @@ import { HashRouter } from 'react-router-dom';
 import AppRouter from './components/AppRouter';
 import { initialState } from './initialState'
 import { reducer } from './reducer'
+import HeaderApp from './components/Heder';
 
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
   return (
     <HashRouter>
       <div className="App">
-        <AppRouter state={state} addPost={dispatch}/>
+        <HeaderApp />
+        <AppRouter state={state} addPost={dispatch} />
       </div>
     </HashRouter>
   );
